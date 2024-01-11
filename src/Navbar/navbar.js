@@ -12,6 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from '@mui/material';
+
+
+import EcomLogo from "../assets/Images/EcomLogo.png"
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -35,28 +39,41 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+            <img
+              src={EcomLogo}
+              alt="Your Logo"
+              style={{
+                height: '80px',
+                width: 'auto',
+                marginRight: '8px',
+                transition: 'transform 0.3s ease-in-out',
+                padding: 'px'
+              }}
+            />
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
+            // sx={{
+            //   mr: 2,
+            //   display: { xs: 'none', md: 'flex' },
+            //   fontFamily: 'monospace',
+            //   fontWeight: 700,
+            //   // letterSpacing: '.0002rem',
+            //   color: 'inherit',
+            //   textDecoration: 'none',
+            // }}
           >
-            LOGO
-          </Typography>
+            Make Your Life Easier!
+          </Typography> */}
+          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
